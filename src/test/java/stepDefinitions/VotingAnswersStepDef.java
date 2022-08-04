@@ -33,7 +33,7 @@ public class VotingAnswersStepDef {
     }
 
     @And("the user clicks on the vote down button")
-    public void the_user_clicks_on_the_vote_down_button() throws InterruptedException {
+    public void the_user_clicks_on_the_vote_down_button() {
         q1.voteDown.click();
         BrowserUtilities.waitFor(2);
 
@@ -59,14 +59,14 @@ public class VotingAnswersStepDef {
     }
 
     @Then("the user verifies that the second answer should move up after clicking up")
-    public void theUserVerifiesThatTheSecondAnswerShouldMoveUpAfterClickingUp() throws InterruptedException {
+    public void theUserVerifiesThatTheSecondAnswerShouldMoveUpAfterClickingUp() {
         WebElement secondAnswerVoteNumber = Driver.getDriver().findElement(By.xpath("(//div[@class='current-votes'])[3]"));
         String secondAnswerVoteNumberText = secondAnswerVoteNumber.getText();
         int secondAnswerVoteNumberDigit = Integer.parseInt(secondAnswerVoteNumberText);
         System.out.println("secondAnswerVoteNumberDigit = " + secondAnswerVoteNumberDigit);
 
         q1.secondAnswerVoteUp.click();
-        Thread.sleep(2000);
+        BrowserUtilities.waitFor(2);
 
         WebElement secondAnswerVoteNumberUpdated = Driver.getDriver().findElement(By.xpath("(//div[@class='current-votes'])[2]"));
         String secondAnswerVoteNumberTextUpdated = secondAnswerVoteNumberUpdated.getText();
