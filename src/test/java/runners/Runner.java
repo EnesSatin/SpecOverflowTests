@@ -12,8 +12,7 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json",
                 "html:target/default-html-reports",
                 "rerun:target/rerun.txt"},
-        dryRun = false,
-        tags = "@wip"
+        dryRun = false
 )
 
 public class Runner {

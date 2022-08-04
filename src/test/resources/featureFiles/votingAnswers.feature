@@ -1,5 +1,5 @@
 # User Story: As a user, I should be able to vote answers.
-@wip3
+
 Feature: Voting answers
 
   Rule:  Only authenticated users can vote
@@ -8,7 +8,7 @@ Feature: Voting answers
       Given the user is on the Questions section
       When the user clicks on the first question
       And the user clicks on the vote down button
-      Then the pop-up message is shown
+      Then the user verifies that the message "Please login to be able to vote!" is displayed
 
   Rule: Answer should move up/down right after voting if the vote changes the order
 

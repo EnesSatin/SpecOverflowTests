@@ -5,11 +5,15 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.Login;
 import pages.Register;
 import utilities.BrowserUtilities;
 import utilities.ConfigurationReader;
 import utilities.Driver;
+
+import java.time.Duration;
 
 public class RegistrationStepDef {
 
@@ -35,7 +39,8 @@ public class RegistrationStepDef {
     @And("the user clicks on the register button")
     public void theUserClicksOnRegisterButton(){
         register.clickOnRegisterButton();
-        BrowserUtilities.waitFor(3);
+        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5))
+                .until(ExpectedConditions.titleIs("Login - Spec Overflow"));
     }
 
     @Then("the registration should be successful")

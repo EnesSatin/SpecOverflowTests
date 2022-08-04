@@ -1,11 +1,16 @@
 package pages;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.BrowserUtilities;
 import utilities.Driver;
+
+import java.time.Duration;
 
 public class AskQuestion extends HomePage {
 
@@ -27,11 +32,12 @@ public class AskQuestion extends HomePage {
     @FindBy(xpath = "//input[@value='Post your question']")
     public WebElement postButton;
 
-    @FindBy(xpath = "//div[text()='Not logged in']")
-    public WebElement errorMessage;
+//    @FindBy(xpath = "//div[text()='Not logged in']")
+//    public WebElement errorMessage;
+//
+//    @FindBy(xpath = "//div[text()='Title and Body cannot be empty']")
+//    public WebElement errorMessage2;
 
-    @FindBy(xpath = "//div[text()='Title and Body cannot be empty']")
-    public WebElement errorMessage2;
 
     public void completeAskQuestionProcess(String text1, String text2, String text3) {
         title.sendKeys(text1);
@@ -43,5 +49,4 @@ public class AskQuestion extends HomePage {
         postButton.click();
         BrowserUtilities.waitFor(2);
     }
-
 }

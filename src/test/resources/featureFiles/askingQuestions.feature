@@ -1,11 +1,9 @@
 # User Story: As a user, I should be able to ask questions.
 
-@wip
 Feature: Asking Questions
 
   Background:
     Given the user is on the home page
-
 
   Rule:  Only authenticated users can ask questions
 

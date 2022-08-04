@@ -14,13 +14,13 @@ public class Questions extends HomePage {
 
     // The locators and methods are related to the Questions' section of the website
 
-    @FindBy(xpath = "//a[text()='What is Cucumber?']")
+    @FindBy(css = "#Questions li:nth-of-type(1) .body a")
     public WebElement firstQuestion;
 
-    @FindBy(xpath = "//a[text()='How to write better BDD scenarios?']")
+    @FindBy(css = "#Questions li:nth-of-type(2) .body a")
     public WebElement secondQuestion;
 
-    @FindBy(xpath = "//a[text()='What is SpecFlow?']")
+    @FindBy(css = "#Questions li:nth-of-type(3) .body a")
     public WebElement thirdQuestion;
 
     @FindBy(xpath = "//textarea[@id='AnswerContent']")
