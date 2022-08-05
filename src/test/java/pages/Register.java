@@ -26,11 +26,11 @@ public class Register extends HomePage {
     @FindBy(id = "RegisterButton")
     public WebElement registerButton;
 
-    public void clickOnRegisterButton(){
+    public void clickOnRegisterButton() {
         registerButton.click();
     }
 
-    public void completeRegistrationProcess(String userName, String password, String password2){
+    public void completeRegistrationProcess(String userName, String password, String password2) {
         registerUserName.sendKeys(userName);
         registerPassWord.sendKeys(password);
         registerReEnterPassWord.sendKeys(password2);

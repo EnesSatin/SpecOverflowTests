@@ -37,6 +37,4 @@ public class Questions extends HomePage {
 
     @FindBy(xpath = "(//button[@class='vote-up'])[3]")
     public WebElement secondAnswerVoteUp;
-
-
 }

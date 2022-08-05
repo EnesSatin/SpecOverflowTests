@@ -14,7 +14,6 @@ public abstract class HomePage {
 
     // The locators and methods are related to the Home Page of the website
 
-
     @FindBy(xpath = "//a[text()='Spec Overflow']")
     public WebElement SpecOverflowLogo;
 
@@ -39,19 +38,19 @@ public abstract class HomePage {
     @FindBy(xpath = "//a[@onclick='defaultLogin()']")
     public WebElement defaultLogin;
 
-    public void accessToTheRegisterSection(){
+    public void accessToTheRegisterSection() {
         register.click();
     }
 
-    public void accessToTheAskQuestionSection(){
+    public void accessToTheAskQuestionSection() {
         askQuestion.click();
     }
 
-    public void accessToTheQuestionsSection(){
+    public void accessToTheQuestionsSection() {
         questions.click();
     }
 
-    public void loginAsDefault(){
+    public void loginAsDefault() {
         defaultLogin.click();
     }
 }

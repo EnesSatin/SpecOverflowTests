@@ -37,7 +37,7 @@ public class RegistrationStepDef {
 
 
     @And("the user clicks on the register button")
-    public void theUserClicksOnRegisterButton(){
+    public void theUserClicksOnRegisterButton() {
         register.clickOnRegisterButton();
         new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5))
                 .until(ExpectedConditions.titleIs("Login - Spec Overflow"));

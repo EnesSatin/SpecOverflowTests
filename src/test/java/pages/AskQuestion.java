@@ -32,21 +32,10 @@ public class AskQuestion extends HomePage {
     @FindBy(xpath = "//input[@value='Post your question']")
     public WebElement postButton;
 
-//    @FindBy(xpath = "//div[text()='Not logged in']")
-//    public WebElement errorMessage;
-//
-//    @FindBy(xpath = "//div[text()='Title and Body cannot be empty']")
-//    public WebElement errorMessage2;
-
-
     public void completeAskQuestionProcess(String text1, String text2, String text3) {
         title.sendKeys(text1);
-        BrowserUtilities.waitFor(2);
         body.sendKeys(text2);
-        BrowserUtilities.waitFor(2);
         tags.sendKeys(text3);
-        BrowserUtilities.waitFor(2);
         postButton.click();
-        BrowserUtilities.waitFor(2);
     }
 }

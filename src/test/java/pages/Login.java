@@ -28,5 +28,4 @@ public class Login extends HomePage {
 
     @FindBy(xpath = "//h2[text()='Login']")
     public WebElement loginTitle;
-
 }
